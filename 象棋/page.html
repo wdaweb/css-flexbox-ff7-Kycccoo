@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #back {
+      padding: 50px;
+      width: 500px;
+      height: 550px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+
+    #board {
+      width: 400px;
+      height: 450px;
+      /* border: 1px solid #000; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: start;
+      align-content: flex-start
+    }
+
+    .box2 {
+      width: 400px;
+      height: 50px;
+      border: 0.5px solid #000;
+      box-sizing: border-box;
+      font-family: "標楷體";
+      font-size: 32px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      border: 0.5px solid #000;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      position: relative;
+    }
+
+
+    .piece {
+      width: 45px;
+      height: 45px;
+      border: 1.5px solid #000;
+      border-radius: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: "標楷體";
+      font-size: 32px;
+      line-height: 45px;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      background: white;
+    }
+
+    .piece2 {
+      width: 45px;
+      height: 45px;
+      border: 1.5px solid #000;
+      border-radius: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: "標楷體";
+      font-size: 32px;
+      line-height: 45px;
+      text-align: center;
+      /* transform: translate(50%, -150%); */
+      background: white;
+      position: absolute;
+      top: -22.5px;
+      right: -22.5px;
+    }
+
+    .piece3 {
+      width: 45px;
+      height: 45px;
+      border: 1.5px solid #000;
+      border-radius: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: "標楷體";
+      font-size: 32px;
+      line-height: 45px;
+      text-align: center;
+      transform: translate(-50%, 55%);
+      background: white;
+      color: red;
+      z-index: 1;
+    }
+
+    .piece31 {
+      width: 45px;
+      height: 45px;
+      border: 1.5px solid #000;
+      border-radius: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: "標楷體";
+      font-size: 32px;
+      line-height: 45px;
+      text-align: center;
+      /* transform: translate(50%, 55%); */
+      background: white;
+      color: red;
+      z-index: 1;
+      position: absolute;
+      bottom: -20.5px;
+      right: -22.5px;
+    }
+
+    .text {
+      margin: 20px;
+      font-size: 1.5rem;
+      width: 1rem;
+      font-family: "標楷體";
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text">棋盤裡 <br>，車無輪馬無韁<br>，叫聲將軍提防提防<br>！</div>
+  <div id="back">
+    <div id="board">
+      <div class="box">
+        <div class="piece">車</div>
+      </div>
+      <div class="box">
+        <div class="piece">馬</div>
+      </div>
+      <div class="box">
+        <div class="piece">象</div>
+      </div>
+      <div class="box" style="background:
+      linear-gradient(225deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);">
+        <div class="piece">士</div>
+      </div>
+      <div class="box" style="background:
+      linear-gradient(135deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);">
+        <div class="piece">將</div>
+      </div>
+      <div class="box">
+        <div class="piece">士</div>
+      </div>
+      <div class="box">
+        <div class="piece">象</div>
+      </div>
+      <div class="box">
+        <div class="piece">馬</div>
+        <div class="piece2">車</div>
+      </div>
+      <div class="box">
+      </div>
+      <div class=" box"></div>
+      <div class="box"></div>
+      <div class="box" style="background:
+      linear-gradient(135deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);""></div>
+      <div class=" box" style="background:
+      linear-gradient(45deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);""></div>
+      <div class=" box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece">包</div>
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece">包</div>
+      </div>
+      <div class="box">
+        <div class="piece">卒</div>
+      </div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece">卒</div>
+      </div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece">卒</div>
+      </div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece">卒</div>
+      </div>
+      <div class="box">
+        <div class="piece2">卒</div>
+      </div>
+      <div class="box2">楚河 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;漢界</div>
+      <div class="box">
+        <div class="piece3">兵</div>
+      </div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece3">兵</div>
+      </div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece3">兵</div>
+      </div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece3">兵</div>
+      </div>
+      <div class="box">
+        <div class="piece31">兵</div>
+      </div>
+      <div class="box">
+      </div>
+      <div class="box">
+        <div class="piece3">炮</div>
+      </div>
+      <div class="box">
+
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece3">炮</div>
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box" style="background:
+      linear-gradient(225deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);"></div>
+      <div class="box" style="background:
+      linear-gradient(315deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box">
+        <div class="piece3">俥</div>
+      </div>
+      <div class="box">
+        <div class="piece3">傌</div>
+      </div>
+      <div class="box">
+        <div class="piece3">相</div>
+      </div>
+      <div class="box" style="background:
+      linear-gradient(135deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);">
+        <div class="piece3">仕</div>
+      </div>
+      <div class="box" style="background:
+      linear-gradient(45deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);">
+        <div class="piece3">帥</div>
+      </div>
+      <div class="box">
+        <div class=" piece3">仕</div>
+      </div>
+      <div class="box">
+        <div class="piece3">相</div>
+      </div>
+      <div class="box">
+        <div class="piece3">傌</div>
+        <div class="piece31">俥</div>
+      </div>
+    </div>
+  </div>
+  <div class="text">圖畫裡<br>，龍不吟虎不嘯<br>，小小書童可笑可笑<br>！</div>
+</body>
+
+</html>
